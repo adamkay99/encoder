@@ -25,4 +25,3 @@ if __name__ == "__main__":
                   f", and the original password is {decode(encoded_password)}\n")
         elif selection == 3:
             exit()
-#test
