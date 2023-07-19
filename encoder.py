@@ -7,7 +7,11 @@ def encode(password):
     return int(encoded_password)
 
 def decode(encoded_password):
-    pass
+    encoded_password = str(encoded_password)
+    decoded_password = ''
+    for i in encoded_password:
+        decoded_password += str(int(i) - 3)
+    return decoded_password
 
 if __name__ == "__main__":
     while True:
