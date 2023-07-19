@@ -6,12 +6,17 @@ def encode(password):
     print("Your password has been encoded and stored!\n")
     return int(encoded_password)
 
+
 def decode(encoded_password):
     encoded_password = str(encoded_password)
     decoded_password = ''
     for i in encoded_password:
-        decoded_password += str(int(i) - 3)
+        if int(i) - 3 < 0:
+            decoded_password += str(int(i) - 3 + 10)
+        else:
+            decoded_password += str(int(i) - 3)
     return decoded_password
+
 
 if __name__ == "__main__":
     while True:
